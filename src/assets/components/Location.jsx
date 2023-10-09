@@ -14,7 +14,7 @@ const Location = ({ location, setLocation }) => {
 
   return (
     <section className="bg-[url('./back.png')] bg-cover">
-      <header className="flex justify-center mb-32">
+      <header className="flex justify-center mb-22">
         <img
           className="absolute w-[32%] animate-rotarrr mt-[-10%] bg-transparent]"
           src="./vect1.png"
