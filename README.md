@@ -10,7 +10,8 @@ Aplicación en React que muestra las ubicaciones del universo de Rick and Morty 
 - Busca una ubicación por nombre o por número.
 - Muestra tipo, dimensión y población de la ubicación.
 - Pagina a los residentes de 20 en 20, con su estado, especie, origen y número de apariciones.
-- Avisa cuando una búsqueda no da resultado o no se puede llegar a la API.
+- Pide los residentes de cada página en una sola petición, porque la API limita las peticiones seguidas.
+- Muestra estados de carga y avisa cuando una búsqueda no da resultado o no se puede llegar a la API.
 
 ## Tecnologías
 
