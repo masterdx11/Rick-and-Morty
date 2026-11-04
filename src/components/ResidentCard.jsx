@@ -15,12 +15,12 @@ const ResidentCard = ({ residentEndpoint }) => {
       .get(residentEndpoint)
       .then(({ data }) => setResident(data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [residentEndpoint]);
 
   return (
     <article className="border-2 border-[#8EFF8B]">
       <header className="relative">
-        <img src={resident?.image} alt="" />
+        <img src={resident?.image} alt={resident?.name ?? ""} />
 
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/80 text-white px-5 py-1 rounded-md flex items-center gap-2">
           <div

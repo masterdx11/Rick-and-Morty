@@ -11,7 +11,7 @@ const ResidentList = ({ residents }) => {
     setcurrentPage(1);
   }, [residents]);
   return (
-    <section className="bg-[url('./back2.PNG')] bg-cover">
+    <section className="bg-[url('/back2.PNG')] bg-cover">
 
       <section className="grid grid-cols-[repeat(auto-fit,_300px)] justify-center gap-6 max-w-[1000px] mx-auto py-10">
         {residentsInpage.map((resident) => (
@@ -23,9 +23,10 @@ const ResidentList = ({ residents }) => {
         {pages.map((page) => (
           <li key={page}>
             <button
-              className={`bg-transparent border-2 border-[#8EFF8B] text-[#8EFF8B] font-bold p-1 rounded-full shadow-md shadow-[#8EFF8B] w-10 h-10 ${
-                page === currentPage && "bg-green-500"
+              className={`border-2 border-[#8EFF8B] font-bold p-1 rounded-full shadow-md shadow-[#8EFF8B] w-10 h-10 ${
+                page === currentPage ? "bg-[#8EFF8B] text-black" : "bg-transparent text-[#8EFF8B]"
               } hover:bg-[#8EFF8B] hover:text-black`}
+              aria-current={page === currentPage ? "page" : undefined}
               onClick={() => setcurrentPage(page)}
             >
               {page}

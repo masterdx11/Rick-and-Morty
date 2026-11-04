@@ -1,8 +1,38 @@
-# React + Vite
+# Rick and Morty: explorador de ubicaciones
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación en React que muestra las ubicaciones del universo de Rick and Morty y a sus residentes, usando la [Rick and Morty API](https://rickandmortyapi.com/). Es un proyecto de formación.
 
-Currently, two official plugins are available:
+**Demo:** https://rick-and-morty-zeta-three.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Qué hace
+
+- Abre con una ubicación al azar.
+- Busca una ubicación por nombre o por número.
+- Muestra tipo, dimensión y población de la ubicación.
+- Pagina a los residentes de 20 en 20, con su estado, especie, origen y número de apariciones.
+- Avisa cuando una búsqueda no da resultado o no se puede llegar a la API.
+
+## Tecnologías
+
+React 18, Vite, Tailwind CSS, Axios y Tabler Icons.
+
+## Cómo correrlo
+
+```bash
+npm install
+npm run dev
+```
+
+## Estructura
+
+```text
+src/
+├── App.jsx                 Carga la primera ubicación
+├── components/
+│   ├── Location.jsx        Buscador y datos de la ubicación
+│   ├── ResidentList.jsx    Lista paginada de residentes
+│   └── ResidentCard.jsx    Tarjeta de un residente
+└── utils/
+    ├── pagination.js       Reparte los residentes en páginas
+    └── random.js           Número al azar
+```
